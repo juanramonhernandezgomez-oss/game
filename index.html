@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colores al Centro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>🎮 Colores al Centro</h1>
+        <p class="subtitle">Multijugador local (2 jugadores) • Partidas de 45 segundos</p>
+      </header>
+
+      <section class="panel controls">
+        <div class="control-row">
+          <label for="mode">Modo:</label>
+          <select id="mode">
+            <option value="normal">Normal</option>
+            <option value="kids">Niños (más lento)</option>
+            <option value="senior">Abuelos (alto contraste)</option>
+          </select>
+        </div>
+        <button id="startBtn" class="primary">Iniciar partida</button>
+      </section>
+
+      <section class="panel status">
+        <div><strong>Tiempo:</strong> <span id="time">45</span>s</div>
+        <div><strong>Color objetivo:</strong> <span id="targetColor">—</span></div>
+      </section>
+
+      <section class="boards" id="boards">
+        <article class="board-wrap">
+          <h2>Jugador 1</h2>
+          <div class="score" id="score1">0</div>
+          <div class="board" id="board1" aria-label="Tablero jugador 1"></div>
+        </article>
+        <article class="board-wrap">
+          <h2>Jugador 2</h2>
+          <div class="score" id="score2">0</div>
+          <div class="board" id="board2" aria-label="Tablero jugador 2"></div>
+        </article>
+      </section>
+
+      <section class="panel" id="result" hidden></section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
